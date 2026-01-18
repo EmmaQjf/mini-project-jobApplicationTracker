@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Application Tracker</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+        <h1>JOB APPLICATION TRACKER</h1>
+    </header>
+    <main>
+        <form action="/submit_page.php" method="POST">
+         <label for="name">company Name:</label>
+         <input type="text" id="name" name="name">
+
+         <label for="role">Role:</label>
+         <input type="text" id="role" name="role">
+
+        <label for="status">application status</label>
+         <select name="status" id="status">
+             <option value="applied">Applied</option>
+             <option value="interview">Interview</option>
+             <option value="rejected">Rejected</option>
+         </select>
+
+        <button type="submit" id="submitBtn">Submit</button>
+       </form>
+
+       <ul id="applicationsList"></ul>
+
+</main>
+
+   
+  </body>
+</html>
