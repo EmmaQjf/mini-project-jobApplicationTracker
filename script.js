@@ -24,13 +24,22 @@ const renderForm =() => {
    
         jobs.forEach((job, index) => {
             const list = document.createElement('li')
-            list.innerHTML = `<p> ${job.name}   ${job.role}   ${job.status}</p>`
+            index += 1;
+            list.innerHTML = `<div><p>${index}</p> <p>${job.name}</p>   <p>${job.role}</p>  <p>${job.status}</p> <button class="deleteBtn" data-index="${index}">delete</button> </div>`
             applicationsList.appendChild(list)
-            const deleteBtn = document.createElement('button')
-            deleteBtn.className = "deleteBtn"
-            deleteBtn.textContent = "delete";
-            deleteBtn.dataset.index = index;
-            list.appendChild(deleteBtn)
+           
+            const div = list.querySelector('div')
+            const p = list.querySelectorAll('p')
+            div.classList.add("listStyle")
+            p.forEach((item)=>{
+                item.classList.add("listRowStyle")
+            })
+
+            // const deleteBtn = document.createElement('button')
+            // deleteBtn.className = "deleteBtn"
+            // deleteBtn.textContent = "delete";
+            // deleteBtn.dataset.index = index;
+            // list.appendChild(deleteBtn)
         //     deleteBtn.addEventListener("click", () => {
         //     jobs.splice(index, 1);
         //    localStorage.setItem("jobStorage", JSON.stringify(jobs));

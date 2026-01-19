@@ -19,16 +19,16 @@ This project demonstrates key JavaScript concepts including DOM manipulation, ev
 ---
 ## How it Works
 
-State Management:
+- State Management:
 All job applications are stored in a JavaScript array called jobs. After any change (addition or deletion), the array is saved to localStorage using JSON.stringify().
 
-Rendering:
+- Rendering:
 The renderForm() function updates the DOM to match the current state of the jobs array. Each job is rendered as an <li> with a delete button.
 
-Delete Functionality:
+- Delete Functionality:
 Using event delegation, a single listener is attached to the parent <ul>. When a delete button is clicked, the listener checks event.target.dataset.index to remove the correct job from the array and updates localStorage and the UI.
 
-Form Submission:
+- Form Submission:
 The form submission is intercepted with event.preventDefault() to prevent the page from reloading. A new job object is created and added to the jobs array.
 
 
@@ -38,7 +38,6 @@ The form submission is intercepted with event.preventDefault() to prevent the pa
 - CSS3
 - JavaScript (ES6+)
 - Browser localStorage
-
 
 ---
 ## Future Improvements

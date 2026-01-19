@@ -47,4 +47,28 @@ input[type="text"], input[type="email"] {
 }
 
 
+ul {
+    list-style-type: none;
+    margin-top: 2rem;
+    width: 50vw;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+
+.listRowStyle{
+    width:1rem;
+    height:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listStyle{
+    padding:1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
